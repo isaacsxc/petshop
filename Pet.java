@@ -1,11 +1,11 @@
-public class Cachorro {
+public class Pet {
     private String nome;
     private String raca;
     private int idade;
     private String tipoBanho;
 
     // Construtor
-    public Cachorro(String nome, String raca, int idade, String tipoBanho) {
+    public Pet(String nome, String raca, int idade, String tipoBanho) {
         this.nome = nome;
         this.raca = raca;
         this.idade = idade;
@@ -47,6 +47,6 @@ public class Cachorro {
 
     @Override
     public String toString() {
-        return "Cachorro: " + nome + " | Raça: " + raca + " | Idade: " + idade + " anos | Banho: " + tipoBanho;
+        return "Nome pet: " + nome + " | Raça: " + raca + " | Idade: " + idade + " anos | Banho: " + tipoBanho;
     }
 }

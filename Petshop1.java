@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Petshop1 {
     private static ArrayList<Cliente> clientes = new ArrayList<>();
     private static ArrayList<Funcionario> funcionarios = new ArrayList<>();
-    private static ArrayList<Cachorro> cachorros = new ArrayList<>();
+    private static ArrayList<Pet> cachorros = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -52,7 +52,7 @@ public class Petshop1 {
         } while (opcao != 0);
     }
 
-    // Métodos para cadastrar
+
     private static void cadastrarCliente() {
         System.out.print("Nome do cliente: ");
         String nome = scanner.nextLine();
@@ -91,12 +91,12 @@ public class Petshop1 {
         System.out.print("Tipo de banho: ");
         String tipoBanho = scanner.nextLine();
 
-        Cachorro cachorro = new Cachorro(nome, raca, idade, tipoBanho);
+        Pet cachorro = new Pet(nome, raca, idade, tipoBanho);
         cachorros.add(cachorro);
         System.out.println("Cachorro cadastrado com sucesso!");
     }
 
-    // Métodos para listar
+
     private static void listarClientes() {
         if (clientes.isEmpty()) {
             System.out.println("Nenhum cliente cadastrado.");
@@ -124,7 +124,7 @@ public class Petshop1 {
             System.out.println("Nenhum cachorro cadastrado.");
         } else {
             System.out.println("\n=== LISTA DE CACHORROS ===");
-            for (Cachorro cachorro : cachorros) {
+            for (Pet cachorro : cachorros) {
                 System.out.println(cachorro);
             }
         }
