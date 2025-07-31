@@ -1,17 +1,32 @@
 public class Cachorro extends Animal {
-    private boolean temPeloLongo;
+    private String tamanho;
 
-    public Cachorro(String nome, String raca, int idade, Cliente dono, boolean temPeloLongo) {
-        super(nome, raca, idade, dono);
-        this.temPeloLongo = temPeloLongo;
+    public Cachorro(String nome, int idade, String raca, String dono, String tamanho) {
+        super(nome, idade, raca, dono);
+        this.tamanho = tamanho;
+    }
+
+    public String getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
     }
 
     @Override
-    public String getTipoAnimal() {
-        return "Cachorro";
+    public void emitirSom() {
+        System.out.println("Au Au!");
     }
 
-    // Getter & Setter específico
-    public boolean isTemPeloLongo() { return temPeloLongo; }
-    public void setTemPeloLongo(boolean temPeloLongo) { this.temPeloLongo = temPeloLongo; }
+    @Override
+    public String toString() {
+        return "Cachorro{" +
+                "nome='" + getNome() + '\'' +
+                ", idade=" + getIdade() +
+                ", raca='" + getRaca() + '\'' +
+                ", dono='" + getDono() + '\'' +
+                ", tamanho='" + tamanho + '\'' +
+                '}';
+    }
 }

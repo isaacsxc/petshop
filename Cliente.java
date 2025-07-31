@@ -1,13 +1,12 @@
 public class Cliente {
-     private String nome;
+    private String nome;
+    private String cpf;
     private String telefone;
-    private String endereco;
 
-    // Construtor
-    public Cliente(String nome, String telefone, String endereco) {
+    public Cliente(String nome, String cpf, String telefone) {
         this.nome = nome;
+        this.cpf = cpf;
         this.telefone = telefone;
-        this.endereco = endereco;
     }
 
     // Getters e Setters
@@ -19,6 +18,14 @@ public class Cliente {
         this.nome = nome;
     }
 
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
     public String getTelefone() {
         return telefone;
     }
@@ -27,16 +34,12 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
     @Override
     public String toString() {
-        return "Cliente: " + nome + " | Telefone: " + telefone + " | Endereço: " + endereco;
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", telefone='" + telefone + '\'' +
+                '}';
     }
 }

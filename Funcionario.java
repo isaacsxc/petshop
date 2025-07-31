@@ -3,7 +3,6 @@ public class Funcionario {
     private String cargo;
     private double salario;
 
-    // Construtor
     public Funcionario(String nome, String cargo, double salario) {
         this.nome = nome;
         this.cargo = cargo;
@@ -37,6 +36,10 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionário: " + nome + " | Cargo: " + cargo + " | Salário: R$" + salario;
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", cargo='" + cargo + '\'' +
+                ", salario=" + salario +
+                '}';
     }
 }
