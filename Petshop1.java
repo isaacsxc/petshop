@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Petshop1 {
     private static ArrayList<Cliente> clientes = new ArrayList<>();
     private static ArrayList<Funcionario> funcionarios = new ArrayList<>();
-    private static ArrayList<Pet> cachorros = new ArrayList<>();
+    private static ArrayList<Cachorro> cachorros = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -14,10 +14,10 @@ public class Petshop1 {
             System.out.println("\n=== MENU PETSHOP ===");
             System.out.println("1. Cadastrar Cliente");
             System.out.println("2. Cadastrar Funcionário");
-            System.out.println("3. Cadastrar Cachorro");
+            System.out.println("3. Cadastrar Pet");
             System.out.println("4. Listar Clientes");
             System.out.println("5. Listar Funcionários");
-            System.out.println("6. Listar Cachorros");
+            System.out.println("6. Listar Pets");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
             
@@ -91,7 +91,7 @@ public class Petshop1 {
         System.out.print("Tipo de banho: ");
         String tipoBanho = scanner.nextLine();
 
-        Pet cachorro = new Pet(nome, raca, idade, tipoBanho);
+        Cachorro cachorro = new Cachorro(nome, raca, idade, tipoBanho);
         cachorros.add(cachorro);
         System.out.println("Cachorro cadastrado com sucesso!");
     }
@@ -124,7 +124,7 @@ public class Petshop1 {
             System.out.println("Nenhum cachorro cadastrado.");
         } else {
             System.out.println("\n=== LISTA DE CACHORROS ===");
-            for (Pet cachorro : cachorros) {
+            for (Cachorro cachorro : cachorros) {
                 System.out.println(cachorro);
             }
         }

@@ -1,11 +1,11 @@
-public class Pet {
+public class Cachorro {
     private String nome;
     private String raca;
     private int idade;
     private String tipoBanho;
 
     // Construtor
-    public Pet(String nome, String raca, int idade, String tipoBanho) {
+    public Cachorro(String nome, String raca, int idade, String tipoBanho) {
         this.nome = nome;
         this.raca = raca;
         this.idade = idade;
