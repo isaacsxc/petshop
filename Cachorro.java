@@ -1,5 +1,3 @@
-package model;
-
 public class Cachorro extends Animal {
     private boolean temPeloLongo;
 
