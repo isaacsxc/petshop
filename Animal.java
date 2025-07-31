@@ -1,5 +1,3 @@
-package model;
-
 public abstract class Animal {
     private String nome;
     private String raca;
