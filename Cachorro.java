@@ -1,52 +1,19 @@
-public class Cachorro {
-    private String nome;
-    private String raca;
-    private int idade;
-    private String tipoBanho;
+package model;
 
-    // Construtor
-    public Cachorro(String nome, String raca, int idade, String tipoBanho) {
-        this.nome = nome;
-        this.raca = raca;
-        this.idade = idade;
-        this.tipoBanho = tipoBanho;
-    }
+public class Cachorro extends Animal {
+    private boolean temPeloLongo;
 
-    // Getters e Setters
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getRaca() {
-        return raca;
-    }
-
-    public void setRaca(String raca) {
-        this.raca = raca;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public String getTipoBanho() {
-        return tipoBanho;
-    }
-
-    public void setTipoBanho(String tipoBanho) {
-        this.tipoBanho = tipoBanho;
+    public Cachorro(String nome, String raca, int idade, Cliente dono, boolean temPeloLongo) {
+        super(nome, raca, idade, dono);
+        this.temPeloLongo = temPeloLongo;
     }
 
     @Override
-    public String toString() {
-        return "Nome pet: " + nome + " | Raça: " + raca + " | Idade: " + idade + " anos | Banho: " + tipoBanho;
+    public String getTipoAnimal() {
+        return "Cachorro";
     }
+
+    // Getter & Setter específico
+    public boolean isTemPeloLongo() { return temPeloLongo; }
+    public void setTemPeloLongo(boolean temPeloLongo) { this.temPeloLongo = temPeloLongo; }
 }
