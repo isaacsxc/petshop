@@ -25,12 +25,9 @@ O projeto simula um atendimento real, permitindo registrar nome, telefone, raça
 ## Possíveis melhorias:
 - Salvar os dados em arquivos ou banco de dados para não perdê-los ao fechar.
 - Criar uma interface gráfica para facilitar o uso.
-- Vincular animais aos clientes já cadastrados (e não só pelo nome).
-- Adicionar validações de dados e tratamento de erros.
 - Incluir funções como buscar, editar e remover registros.
-- Cadastrar serviços (banho, tosa, consultas).
+- Cadastrar serviços (banho, tosa, consultas, vendas).
 - Implementar login de usuário (admin/funcionário).
-- Gerar relatórios automáticos com os dados cadastrados.
 ## Demonstração:
 https://vscode.dev/github/isaacsxc/petshop1/blob/main
 ## Autores:
