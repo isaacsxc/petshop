@@ -90,59 +90,23 @@ class Animal {
     }
 }
 
-class Produto {
-    private String nome;
-    private double preco;
-    private int quantidade;
-
-    public Produto(String nome, double preco, int quantidade) {
-        this.nome = nome;
-        this.preco = preco;
-        this.quantidade = quantidade;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    @Override
-    public String toString() {
-        return nome + " | Preço: R$" + preco + " | Estoque: " + quantidade;
-    }
-}
-
 public class Petshop {
     private static ArrayList<Cliente> clientes = new ArrayList<>();
     private static ArrayList<Funcionario> funcionarios = new ArrayList<>();
     private static ArrayList<Animal> animais = new ArrayList<>();
-    private static ArrayList<Produto> produtos = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int opcao;
 
         do {
-            System.out.println("\n=== SISTEMA PETSHOP ===");
+            System.out.println("\n=== SISTEMA PETSHOP SIMPLIFICADO ===");
             System.out.println("1. Cadastrar Cliente");
             System.out.println("2. Cadastrar Funcionário");
             System.out.println("3. Cadastrar Animal");
-            System.out.println("4. Cadastrar Produto");
-            System.out.println("5. Listar Clientes");
-            System.out.println("6. Listar Funcionários");
-            System.out.println("7. Listar Animais");
-            System.out.println("8. Listar Produtos");
+            System.out.println("4. Listar Clientes");
+            System.out.println("5. Listar Funcionários");
+            System.out.println("6. Listar Animais");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
             
@@ -160,19 +124,13 @@ public class Petshop {
                     cadastrarAnimal();
                     break;
                 case 4:
-                    cadastrarProduto();
-                    break;
-                case 5:
                     listarClientes();
                     break;
-                case 6:
+                case 5:
                     listarFuncionarios();
                     break;
-                case 7:
+                case 6:
                     listarAnimais();
-                    break;
-                case 8:
-                    listarProdutos();
                     break;
                 case 0:
                     System.out.println("Saindo do sistema...");
@@ -225,20 +183,6 @@ public class Petshop {
         System.out.println("Animal cadastrado com sucesso!");
     }
 
-    private static void cadastrarProduto() {
-        System.out.print("Nome do produto: ");
-        String nome = scanner.nextLine();
-        System.out.print("Preço: ");
-        double preco = scanner.nextDouble();
-        System.out.print("Quantidade em estoque: ");
-        int quantidade = scanner.nextInt();
-        scanner.nextLine();
-
-        Produto produto = new Produto(nome, preco, quantidade);
-        produtos.add(produto);
-        System.out.println("Produto cadastrado com sucesso!");
-    }
-
     private static void listarClientes() {
         if (clientes.isEmpty()) {
             System.out.println("Nenhum cliente cadastrado.");
@@ -268,17 +212,6 @@ public class Petshop {
             System.out.println("\n=== ANIMAIS CADASTRADOS ===");
             for (Animal animal : animais) {
                 System.out.println(animal);
-            }
-        }
-    }
-
-    private static void listarProdutos() {
-        if (produtos.isEmpty()) {
-            System.out.println("Nenhum produto cadastrado.");
-        } else {
-            System.out.println("\n=== PRODUTOS CADASTRADOS ===");
-            for (Produto produto : produtos) {
-                System.out.println(produto);
             }
         }
     }
