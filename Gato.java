@@ -1,5 +1,3 @@
-package model;
-
 public class Gato extends Animal {
     private boolean ehPeludo;
 
