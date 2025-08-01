@@ -83,34 +83,31 @@ public class Main {
     }
 
     private static void cadastrarAnimal() {
-        System.out.println("\nCadastro de Animal");
-        System.out.print("Tipo (1-Cachorro / 2-Gato): ");
-        int tipo = scanner.nextInt();
-        scanner.nextLine(); // Limpar buffer
-        
-        System.out.print("Nome: ");
-        String nome = scanner.nextLine();
-        System.out.print("Idade: ");
-        int idade = scanner.nextInt();
-        scanner.nextLine(); // Limpar buffer
-        System.out.print("Raça: ");
-        String raca = scanner.nextLine();
-        System.out.print("Dono: ");
-        String dono = scanner.nextLine();
-        
-        if (tipo == 1) {
-            System.out.print("Tamanho (Pequeno/Médio/Grande): ");
-            String tamanho = scanner.nextLine();
-            animais.add(new Cachorro(nome, idade, raca, dono, tamanho));
-        } else if (tipo == 2) {
-            System.out.print("É independente? (true/false): ");
-            boolean independente = scanner.nextBoolean();
-            scanner.nextLine(); // Limpar buffer
-            animais.add(new Gato(nome, idade, raca, dono));
-        }
-        
-        System.out.println("Animal cadastrado com sucesso!");
+    System.out.println("\nCadastro de Animal");
+    System.out.print("Tipo (1-Cachorro / 2-Gato): ");
+    int tipo = scanner.nextInt();
+    scanner.nextLine(); // Limpar buffer
+    
+    System.out.print("Nome: ");
+    String nome = scanner.nextLine();
+    System.out.print("Idade: ");
+    int idade = scanner.nextInt();
+    scanner.nextLine(); // Limpar buffer
+    System.out.print("Raça: ");
+    String raca = scanner.nextLine();
+    System.out.print("Dono: ");
+    String dono = scanner.nextLine();
+    
+    if (tipo == 1) {
+        System.out.print("Tamanho (Pequeno/Médio/Grande): ");
+        String tamanho = scanner.nextLine();
+        animais.add(new Cachorro(nome, idade, raca, dono, tamanho));
+    } else if (tipo == 2) {
+        animais.add(new Gato(nome, idade, raca, dono)); // Sem o parâmetro de independência
     }
+    
+    System.out.println("Animal cadastrado com sucesso!");
+}
 
     private static void listarClientes() {
         System.out.println("\nLista de Clientes:");
