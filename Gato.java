@@ -1,17 +1,9 @@
 public class Gato extends Animal {
-    private boolean ehIndependente;
+    // Atributo ehIndependente removido
+    // Construtor simplificado
 
-    public Gato(String nome, int idade, String raca, String dono, boolean ehIndependente) {
+    public Gato(String nome, int idade, String raca, String dono) {
         super(nome, idade, raca, dono);
-        this.ehIndependente = ehIndependente;
-    }
-
-    public boolean isEhIndependente() {
-        return ehIndependente;
-    }
-
-    public void setEhIndependente(boolean ehIndependente) {
-        this.ehIndependente = ehIndependente;
     }
 
     @Override
@@ -21,7 +13,6 @@ public class Gato extends Animal {
                 ", idade=" + getIdade() +
                 ", raca='" + getRaca() + '\'' +
                 ", dono='" + getDono() + '\'' +
-                ", ehIndependente=" + ehIndependente +
                 '}';
     }
 }

@@ -106,7 +106,7 @@ public class Main {
             System.out.print("É independente? (true/false): ");
             boolean independente = scanner.nextBoolean();
             scanner.nextLine(); // Limpar buffer
-            animais.add(new Gato(nome, idade, raca, dono, independente));
+            animais.add(new Gato(nome, idade, raca, dono));
         }
         
         System.out.println("Animal cadastrado com sucesso!");
