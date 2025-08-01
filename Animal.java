@@ -44,9 +44,6 @@ public class Animal {
         this.dono = dono;
     }
 
-    public void emitirSom() {
-        System.out.println("O animal emite um som.");
-    }
 
     @Override
     public String toString() {

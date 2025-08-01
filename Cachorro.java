@@ -14,10 +14,6 @@ public class Cachorro extends Animal {
         this.tamanho = tamanho;
     }
 
-    @Override
-    public void emitirSom() {
-        System.out.println("Au Au!");
-    }
 
     @Override
     public String toString() {
