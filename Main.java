@@ -23,7 +23,7 @@ public class Main {
             System.out.print("Escolha uma opção: ");
             
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
             
             switch(opcao) {
                 case 1:
@@ -76,7 +76,7 @@ public class Main {
         String cargo = scanner.nextLine();
         System.out.print("Salário: ");
         double salario = scanner.nextDouble();
-        scanner.nextLine(); // Limpar buffer
+        scanner.nextLine();
         
         funcionarios.add(new Funcionario(nome, cargo, salario));
         System.out.println("Funcionário cadastrado com sucesso!");
@@ -86,13 +86,13 @@ public class Main {
     System.out.println("\nCadastro de Animal");
     System.out.print("Tipo (1-Cachorro / 2-Gato): ");
     int tipo = scanner.nextInt();
-    scanner.nextLine(); // Limpar buffer
+    scanner.nextLine();
     
     System.out.print("Nome: ");
     String nome = scanner.nextLine();
     System.out.print("Idade: ");
     int idade = scanner.nextInt();
-    scanner.nextLine(); // Limpar buffer
+    scanner.nextLine();
     System.out.print("Raça: ");
     String raca = scanner.nextLine();
     System.out.print("Dono: ");
@@ -103,7 +103,7 @@ public class Main {
         String tamanho = scanner.nextLine();
         animais.add(new Cachorro(nome, idade, raca, dono, tamanho));
     } else if (tipo == 2) {
-        animais.add(new Gato(nome, idade, raca, dono)); // Sem o parâmetro de independência
+        animais.add(new Gato(nome, idade, raca, dono));
     }
     
     System.out.println("Animal cadastrado com sucesso!");
